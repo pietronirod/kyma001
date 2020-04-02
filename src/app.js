@@ -12,7 +12,7 @@ new PubSub({
         private_key: process.env.PRIVATE_KEY
     }
 })
-    .topic(provess.env.PUBSUB_TOPIC)
+    .topic(process.env.PUBSUB_TOPIC)
     .publish(dataBuffer)
     .then(messageId => {
         console.log(`Message ${messageId} published`)
