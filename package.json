@@ -1,0 +1,25 @@
+{
+  "name": "kyma001",
+  "version": "1.0.0",
+  "description": "Kyma Kubeless Function",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pietronirod/kyma001.git"
+  },
+  "keywords": ["kyma", "marketing", "event", "esinno-1309"],
+  "author": "David Fernandes Pietroniro",
+  "license": "  ISC",
+  "bugs": {
+    "url": "https://github.com/pietronirod/kyma001/issues"
+  },
+  "homepage": "https://github.com/pietronirod/kyma001#readme",
+  "dependencies": {
+    "@google-cloud/pubsub": "^1.0.0",
+    "dotenv": "^8.2.0"
+  }
+}
