@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/pietronirod/kyma001.git"
   },
-  "keywords": ["kyma", "marketing", "event", "esinno-1309"],
+  "keywords": [
+    "kyma",
+    "marketing",
+    "event",
+    "esinno-1309"
+  ],
   "author": "David Fernandes Pietroniro",
   "license": "  ISC",
   "bugs": {
