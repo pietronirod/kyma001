@@ -3,8 +3,6 @@ const { PubSub } = require("@google-cloud/pubsub")
 
 require("dotenv").config()
 
-const PUBSUB_TOPIC = "esinno-1309"
-
 const dataBuffer = Buffer.from(JSON.stringify(payload))
 
 new PubSub({
@@ -14,7 +12,7 @@ new PubSub({
         private_key: process.env.PRIVATE_KEY
     }
 })
-    .topic(PUBSUB_TOPIC)
+    .topic(provess.env.PUBSUB_TOPIC)
     .publish(dataBuffer)
     .then(messageId => {
         console.log(`Message ${messageId} published`)
