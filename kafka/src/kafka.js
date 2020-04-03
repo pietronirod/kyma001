@@ -4,6 +4,7 @@ const produceMessage = (evt) => {
     const client = new KafkaClient({
         kafkaHost: process.env.KAFKA_HOSTNAME,
         idleConnection: 5000,
+        requestTimeout: 5000,
         sslOptions: {
             rejectUnauthorized: false
         },
@@ -11,13 +12,12 @@ const produceMessage = (evt) => {
             mechanism: "plain",
             username: process.env.KAFKA_USERNAME,
             password: process.env.KAFKA_PASSWORD
-        },
-        requestTimeout: 5000,
+        }
     })
 
     const payloads = [{
         topic: process.env.KAFKA_TOPIC,
-        partition:1,
+        partition: 1,
         messages: JSON.stringify(evt.data)
     }]
 
