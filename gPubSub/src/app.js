@@ -1,9 +1,8 @@
-const payload = require("../mock/payload.json")
-const { PubSub } = require("@google-cloud/pubsub")
-
+const event = require("../mock/payload.json")
 require("dotenv").config()
 
-const dataBuffer = Buffer.from(JSON.stringify(payload))
+const { PubSub } = require("@google-cloud/pubsub")
+const dataBuffer = Buffer.from(JSON.stringify(event.data))
 
 new PubSub({
     projectId: process.env.PROJECT_ID,
