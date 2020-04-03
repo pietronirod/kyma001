@@ -1,7 +1,8 @@
 const dotenv = require("dotenv").config()
 console.log(dotenv)
 
-const { produceMessage } = require("./kafka")
+const { producer } = require("./producer")
+const { consumer } = require("./consumer")
 
 const event = {
     data: {
@@ -10,4 +11,6 @@ const event = {
     }
 }
 
-produceMessage(event)
+// producer(event)
+consumer()
+console.log('....')

@@ -1,6 +1,6 @@
 const { KafkaClient, Producer } = require("kafka-node")
 
-const produceMessage = (evt) => {
+const producer = (evt) => {
     const client = new KafkaClient({
         kafkaHost: process.env.KAFKA_HOSTNAME,
         idleConnection: 5000,
@@ -40,4 +40,4 @@ const produceMessage = (evt) => {
     })
 }
 
-exports.produceMessage = produceMessage
+exports.producer = producer
