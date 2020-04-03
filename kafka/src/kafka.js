@@ -16,7 +16,7 @@ const produceMessage = (evt) => {
     })
 
     const payloads = [{
-        topic: "esinno-1309",
+        topic: process.env.KAFKA_TOPIC,
         partition:1,
         messages: JSON.stringify(evt.data)
     }]
